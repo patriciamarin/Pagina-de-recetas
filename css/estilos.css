@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    opacity: .8;
+    object-fit: cover;
+}
+
+body {
+    font-family: 'Caveat Brush', cursive;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Caveat Brush', cursive;
+    letter-spacing: 1.5px;
+}
+
+.contenedor {
+    margin: auto;
+    width: 99%;
+}
+
+
+/*estilos header*/
+
+.header {
+    height: 60px;
+}
+
+.header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo,
+.icon-icono {
+    margin: 7px;
+    color: #fff;
+}
+
+.icon-icono {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #fba;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+/*estilos de menu*/
+
+.nav {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.menu {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.menu__link {
+    display: block;
+    padding: 15px;
+    background: #fba;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu__link:hover,
+select {
+    background: rgb(196, 9, 9);
+    color: aqua;
+}
+
+.mostrar {
+    left: 0;
+}
+
+
+/*estilos del banner*/
+
+.banner {
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 40px;
+}
+
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.banner__text {
+    display: none;
+    font-size: 20px;
+}
+
+.banner__img:hover {
+    filter: blur(6px);
+}
+
+
+/*estilos de info*/
+
+.info__columna {
+    background: #fba;
+    color: aqua;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.info__img {
+    height: 450px;
+    width: 550px;
+    object-fit: cover;
+    position: relative;
+}
+
+
+/*estilos de curso*/
+
+.section__titulo {
+    text-align: center;
+    font-size: 30px;
+    color: #fba;
+}
+
+.cursos {
+    padding: 200px;
+    margin: auto;
+}
+
+.cursos__columnas {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.cursos__descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: hwb(0 2% 98%);
+    background: transparent;
+    width: 70%;
+}
+
+.cursos__titulo {
+    font-size: 15px;
+    margin: 5px 0;
+    height: 100%;
+    color: rgb(182, 8, 8);
+}
+
+.cursos__text {
+    font-size: 5px;
+    margin: 5px 0;
+    height: 100%;
+}
+
+.cursos__img {
+    width: 97%;
+    height: 450px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+
+/*estilos carta 3d*/
+
+.laser {
+    overflow: hidden;
+    padding: 5px;
+}
+
+.pesor {
+    height: 280px;
+    width: 350px;
+    margin: 2rem;
+    padding: 10px;
+    perspective: 700;
+    box-shadow: 0px 0px 5px black;
+    float: left;
+}
+
+.carta {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 4s;
+}
+
+.carta:hover {
+    transform: rotateY(180deg);
+}
+
+.lado {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.frente {
+    background: rgb(153, 82, 82);
+}
+
+.atras {
+    background: transparent;
+    transform: rotateY(180deg);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* diseño de footer*/
+
+.footer {
+    background: #fba;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: rgb(119, 18, 18);
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.item {
+    margin-top: 60px;
+    padding: 10px;
+}
+
+
+/*imagenes transitorias*/
+
+.vanes {
+    width: 990px;
+    height: 500px;
+    border: 3px solid red;
+    margin: auto;
+    background-size: 100% 100%;
+    animation: vanes 10s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes vanes {
+    0%,
+    30% {
+        background-image: url(../imagenes/postre13.webp);
+        opacity: 1;
+    }
+    31%,
+    34% {
+        opacity: 0.1;
+    }
+    35%,
+    65% {
+        background-image: url(../imagenes/brina-blum-P9WkD82hLUI-unsplash.jpg);
+        opacity: 1;
+    }
+    66%,
+    69% {
+        opacity: 0.1;
+    }
+    70%,
+    100% {
+        background-image: url(../imagenes/postre9.webp);
+        opacity: 1;
+    }
+}
+
+
+/*estilos responsive*/
+
+@media(min-width:480px) {
+    .logo {
+        font-size: 40px;
+    }
+    .banner__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .banner__text {
+        display: block;
+        font-size: 19px;
+        margin: 7px 0;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -100px;
+    }
+    .cursos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -100px;
+    }
+    .info__columna {
+        width: 30%;
+    }
+    info__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .cursos {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .section__titulo {
+        width: 100%;
+    }
+    .cursos__columnas {
+        width: 50%;
+    }
+    .footer .social [class^="icon-"] {
+        margin: 0 10px;
+    }
+}
+
+
+/*tamaño tablet*/
+
+@media(min-width:768px) {
+    .banner__titulo {
+        font-size: 40px;
+    }
+    .cursos__titulo {
+        font-size: 40px;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -89px;
+    }
+    .cursos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -89px;
+    }
+}
+
+
+/*tamaño escritorio*/
+
+@media(min-width:1024px) {
+    .menu {
+        display: flex;
+    }
+    .section__titulo {
+        font-size: 50px;
+        margin: 10px 0;
+    }
+    .menu__link {
+        background: none;
+        font-size: 20px;
+    }
+    .select {
+        color: #fff;
+        background: #fba;
+    }
+    .banner__titulo {
+        font-size: 70px;
+    }
+    .info {
+        margin-top: -250px;
+    }
+    .info__columna {
+        padding: 30px;
+    }
+    .info__titulo {
+        font-size: 40px;
+        text-align: center;
+    }
+    .banner__text {
+        font-size: 30px;
+    }
+    .cursos__descripcion {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .cursos__titulo {
+        font-size: 50px;
+    }
+    .cursos__txt {
+        font-size: 20px;
+    }
+}
+
+@media(min-width:1280px) {
+    .contenedor {
+        width: 1340px;
+    }
+    .logo {
+        font-size: 70px;
+    }
+    .banner .contenedor {
+        top: 40%;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -250px;
+    }
+    .cursos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -250px;
+    }
+}
+
+.copy {
+    text-align: center;
+    font-size: 2rem;
+}
